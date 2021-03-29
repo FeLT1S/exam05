@@ -40,6 +40,9 @@ public:
 	}
 
 	void launchSpell(std::string const & spell, ATarget const & trg) {
-		book.launchSpell(spell, trg);
+		ASpell *tmp = book.createSpell(spell);
+
+		if (tmp)
+			tmp->launch(trg);
 	}
 };

@@ -31,12 +31,13 @@ public:
 			}
 		}
 	}
-	void launchSpell(std::string const & spell, ATarget const & trg)
+	ASpell *createSpell(std::string const & spell)
 	{
 		for (std::vector<ASpell *>::iterator it = _spells.begin(); it != _spells.end(); ++it)
 		{
 			if (spell == (*it)->getName())
-				(*it)->launch(trg);
+				return (*it);
 		}
+		return NULL;
 	}
 };

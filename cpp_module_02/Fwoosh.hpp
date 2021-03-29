@@ -3,7 +3,7 @@
 
 class Fwoosh : public ASpell {
 public:
-	Fwoosh() : ASpell("Fwoosh", "fwooshed") {}
+	Fwoosh() : ASpell("Fwoosh" ,"fwooshed") {}
 	~Fwoosh() {}
-	ASpell *clone() {return new Fwoosh();}
+	Fwoosh *clone() const {return new Fwoosh();}
 };

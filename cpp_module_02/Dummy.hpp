@@ -6,5 +6,5 @@ class Dummy : public ATarget {
 public:
 	Dummy() : ATarget("Target Practice Dummy") {}
 	~Dummy() {}
-	Dummy *clone() {return new Dummy();}
+	Dummy *clone() const {return new Dummy();}
 };

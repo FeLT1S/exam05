@@ -14,12 +14,12 @@ public:
 		_type = copy._type;
 		return *this;
 	}
-	~ATarget() {}
+	virtual ~ATarget() {}
 	
 	ATarget(std::string const & type) : _type(type) {}
 
 	std::string getType() const {return _type;}
-	ATarget *clone() const {return new ATarget(_type);}
+	virtual ATarget *clone() const  = 0;
 
 	void getHitBySpell(ASpell const & spell) const;
 };
